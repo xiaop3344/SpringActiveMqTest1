@@ -13,7 +13,7 @@ import javax.jms.Session;
 
 /**
  * @ClassName ProducerService
- * @Description
+ * @Description  生产者推送消息
  * @Author xiaop
  * @Date 2018/11/3010:29
  * Version 1.0

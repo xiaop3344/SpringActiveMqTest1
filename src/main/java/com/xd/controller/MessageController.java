@@ -34,7 +34,7 @@ public class MessageController {
     private ConsumerService consumerService;
 
     @Resource(name = "demoQueueDestination")
-    private Destination destination;
+    private Destination destination;  //为xml配置文件中的 目的队列 也可自行定义其他队列
 
     @RequestMapping(value = "/sendMessage",method = RequestMethod.POST)
     @ResponseBody
@@ -47,7 +47,7 @@ public class MessageController {
     @ResponseBody
     public String recieve(){
         logger.info(Thread.currentThread().getName()+"------------send to jms Start");
-        TextMessage tm = consumerService.recive(destination);
+        TextMessage tm = consumerService.recive(destination);   //从某个队列中 取出消息
         logger.info(Thread.currentThread().getName()+"------------send to jms End");
         String message=null;
         try {

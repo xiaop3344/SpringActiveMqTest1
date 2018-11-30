@@ -24,6 +24,7 @@
       <param-name>contextConfigLocation</param-name>
       <param-value>classpath:spring-mvc.xml</param-value>
     </init-param>
+    <!--这个先行加载必须写要不然报错-->
     <load-on-startup>1</load-on-startup>
   </servlet>
   <servlet-mapping>

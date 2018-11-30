@@ -11,7 +11,7 @@ import javax.jms.TextMessage;
 
 /**
  * @ClassName ConsumerService
- * @Description
+ * @Description  消费者 获取消息
  * @Author xiaop
  * @Date 2018/11/3010:44
  * Version 1.0
