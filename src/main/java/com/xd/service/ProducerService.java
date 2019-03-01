@@ -23,7 +23,7 @@ public class ProducerService {
     @Resource(name = "jmsTemplate")
     private JmsTemplate jmsTemplate;
 
-
+    //向某个队列发送消息
     public void sendMessage(Destination destination,final String msg){
         System.out.println(Thread.currentThread().getName()+"向队列"+destination+"发送消息--->"+msg);
         jmsTemplate.send(destination, new MessageCreator() {
@@ -37,7 +37,7 @@ public class ProducerService {
 
     }
 
-
+    //向Mq.xml 中默认的目的地队列发送
     public void sendMessage(final String msg){
         System.out.println(Thread.currentThread().getName()+"向队列发送消息--->"+msg);
         jmsTemplate.send(new MessageCreator() {
@@ -47,6 +47,7 @@ public class ProducerService {
             }
         });
     }
+
 
 
 
